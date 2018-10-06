@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/welcome/welcome",
+    "pages/order/order",
+    "pages/mine/mine",
+    "pages/createOrder/createOrder",
+    "pages/history/history",
+    "pages/addCar/addCar",
+    "pages/bindInfo/bindInfo",
+    "pages/test/test",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2154a7",
+    "navigationBarTitleText": "邮客",
+    "navigationBarTextStyle": "white",
+    "navigationStyle": "default"
+  },
+  "tabBar": {
+    "list": [
+    {
+      "pagePath": "pages/history/history",
+      "text": "history",
+      "iconPath": "./pages/images/history-gery.png",
+      "selectedIconPath": "./pages/images/history-blue.png"
+    },
+    {
+      "pagePath": "pages/order/order",
+      "text": "order",
+      "iconPath": "./pages/images/order-grey.png",
+      "selectedIconPath": "./pages/images/order-blue.png"
+    },
+    {
+      "pagePath": "pages/mine/mine",
+      "text": "mine",
+      "iconPath": "./pages/images/mine-grey.png",
+      "selectedIconPath": "./pages/images/mine-blue.png"
+    }
+    ],
+    "color": "#7f8389",
+    "selectedColor": "#2154a7"
+  }
+}

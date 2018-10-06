@@ -1,0 +1,84 @@
+<!--pages/createOrder/createOrder.wxml-->
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{errMsg}}</view>
+    
+    <view class="weui-cells__title">接待人信息</view>
+    <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+                <view class="weui-label">姓名</view>
+            </view>
+            <view class="weui-cell__bd">
+                <input id="name" value="{{name}}" bindinput="inputChange" bindblur="inputBlur"  class="weui-input" placeholder="请输入姓名"/>
+            </view>
+        </view>
+
+        <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+                <view class="weui-label">学工号</view>
+            </view>
+            <view class="weui-cell__bd">
+                <input id="id" value="{{id}}" bindinput="inputChange" bindblur="inputBlur"  class="weui-input" type="number" placeholder="请输入学工号"/>
+            </view>
+        </view>
+    </view>
+
+    <view class="weui-cells__title">到访日期</view>
+    <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_select">
+            <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                <view class="weui-label">选择日期</view>
+            </view>
+            <view class="weui-cell__bd">
+                <picker bindchange="dateChange" mode="date" start="{{date}}" end="2020-12-31">
+                    <view class="weui-select">{{date}}</view>
+                </picker>
+            </view>
+        </view>
+    </view>
+
+    <view class="weui-cells__title">车辆信息</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_switch">
+          <view class="weui-cell__bd">随行车辆</view>
+          <view class="weui-cell__ft">
+              <switch bindchange="switchChange" />
+          </view>
+      </view>
+    </view>
+    <block class="with-car" wx:if="{{withCar}}">
+      <view class="weui-cells__title">身份</view>
+      <view class="weui-cells weui-cells_after-title">
+        <radio-group bindchange="radioChange">
+            <label class="weui-cell weui-check__label" wx:for="{{identityItems}}" wx:key="{{item.value}}">
+                <radio class="weui-check" value="{{item.value}}" checked="{{item.checked}}"/>
+
+                <view class="weui-cell__bd">{{item.name}}</view>
+                <view class="weui-cell__ft weui-cell__ft_in-radio" wx:if="{{item.checked}}">
+                    <icon class="weui-icon-radio" type="success_no_circle" size="16"></icon>
+                </view>
+            </label>
+        </radio-group>
+      </view>
+
+      <view class="weui-cells__title">车牌号</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_select">
+            <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                <view class="weui-label">选择车牌</view>
+            </view>
+            <view class="weui-cell__bd">
+                <picker bindchange="carChange" mode="selector" range="{{carArray}}">
+                    <view class="weui-select">{{carNumber}}</view>
+                </picker>
+            </view>
+            <view bindtap="addCar" class="weui-cell__ft">
+                <view class="weui-vcode-btn" style="border: none; margin-left: 0">添加</view>
+            </view>
+        </view>
+      </view>
+    </block>
+    <button bindtap="submitOrder" class="btn btn-default btn-commit" hover-class='btn-default-hover'>提交</button>
+  </view>
+</view>

@@ -1,0 +1,17 @@
+/* pages/history/history.wxss */
+.page .btn-delete {
+  position: absolute;
+  top: 60rpx;
+  right: 50rpx;
+}
+.page .page__bd .btn-new {
+  position: fixed;
+  left: 335rpx;
+  bottom: 18rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+.page .page__bd .btn-new image {
+  width: 100%;
+  height: 100%;
+}

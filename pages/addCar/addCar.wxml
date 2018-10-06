@@ -1,0 +1,35 @@
+<!--pages/addCar/addCar.wxml-->
+<!--pages/bindInfo/bindInfo.wxml-->
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{errMsg}}</view>
+    
+    <view class="weui-cells__title">车牌号</view>
+    <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+                <view class="weui-label">车牌号</view>
+            </view>
+            <view class="weui-cell__bd">
+                <input id="carId" bindinput="inputChange" class="weui-input" placeholder="请输入车牌号"/>
+            </view>
+        </view>
+    </view>
+
+    <view class="weui-cells__title">车辆类型</view>
+    <view class="weui-cells weui-cells_after-title">
+        <radio-group bindchange="radioChange">
+            <label class="weui-cell weui-check__label" wx:for="{{carTypes}}" wx:key="{{item.value}}">
+                <radio class="weui-check" value="{{item.value}}" checked="{{item.checked}}"/>
+
+                <view class="weui-cell__bd">{{item.name}}</view>
+                <view class="weui-cell__ft weui-cell__ft_in-radio" wx:if="{{item.checked}}">
+                    <icon class="weui-icon-radio" type="success_no_circle" size="16"></icon>
+                </view>
+            </label>
+        </radio-group>
+    </view>
+
+    <button bindtap="submitCar" class="btn btn-default btn-sticky-bottom" hover-class='btn-default-hover'>提交</button>
+  </view>
+</view>

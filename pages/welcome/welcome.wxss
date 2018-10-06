@@ -1,0 +1,22 @@
+/* pages/welcome/welcome.wxss */
+.page .picture {
+  width: 690rpx;
+  height: 430rpx;
+  margin: 15px auto 0;
+  overflow: hidden;
+  border-radius: 20rpx;
+  border: 1px solid rgba(255, 255, 255, .5);
+}
+.page image {
+  width: 100%;
+  height: 100%;
+}
+.page .main-contain {
+  margin-top: 218rpx;
+}
+
+.page .main-contain .tips {
+  width: 750rpx;
+  margin: 30rpx auto;
+  text-align: center;
+}

@@ -1,0 +1,22 @@
+<!--pages/order/order.wxml-->
+<view class="page">
+  <view class="page__bd">
+    <view wx:if="{{showTopTips}}" class="weui-toptips weui-toptips_{{tipsMode}}">{{topTips}}</view>
+    <view class="main-content">
+      <view class="QRcode">
+        <image wx:if="{{!hasCode}}" src="../images/error.png"></image>
+        <image wx:if="{{hasCode}}" src="{{code}}"></image>
+      </view>
+      <block wx:if="{{hasCode}}">
+      <view class="description">
+        二维码说明文字
+      </view>
+      <view class="deadline">有效期至2018-10-10</view>
+      </block>
+    </view>
+
+    <view bindtap="createNewOrder" class="btn-new">
+      <image src='../images/new2.png'></image>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,32 @@
+/* pages/order/order.wxss */
+.page .main-content .QRcode {
+  margin: 200rpx auto 0;
+  width: 450rpx;
+}
+.page .main-content image {
+  width: 100%;
+}
+.page .main-content .description,
+ .page .main-content .deadline{
+  padding: 0 150rpx;
+  width: 450rpx;
+  font-size: 30rpx;
+  color: #888888;
+}
+.page .main-content .description {
+  margin-top: 75rpx;
+}
+.page .main-content .deadline {
+  margin-top: 30rpx;
+}
+.page .page__bd .btn-new {
+  position: fixed;
+  left: 335rpx;
+  bottom: 18rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+.page .page__bd .btn-new image {
+  width: 100%;
+  height: 100%;
+}

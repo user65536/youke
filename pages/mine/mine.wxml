@@ -1,0 +1,38 @@
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-cells__title">个人信息</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">姓名</view>
+                <view class="weui-cell__ft">{{name}}</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__bd">性别</view>
+                <view class="weui-cell__ft">{{gender}}</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__bd">手机号</view>
+                <view class="weui-cell__ft">{{phoneNumber}}</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__bd">身份证号</view>
+                <view class="weui-cell__ft">{{idCardNumber}}</view>
+            </view>
+        </view>
+
+        <view class="weui-cells__title">已绑定车辆</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view wx:for="{{carArray}}" wx:key="index" id="{{index}}" bindlongpress="deleteCar" class="weui-cell" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">{{item}}</view>
+            </view>
+            <navigator url="../addCar/addCar" class="weui-cell weui-cell_link weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">添加</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+        </view>
+
+        
+
+        
+    </view>
+</view>

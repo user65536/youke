@@ -1,0 +1,6 @@
+/* pages/createOrder/createOrder.wxss */
+.page .btn-commit {
+  margin-top: 55rpx;
+}
+.page .with-car {
+}

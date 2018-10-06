@@ -1,0 +1,52 @@
+<!--pages/history/history.wxml-->
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-panel">
+            <view class="weui-panel__hd">预约历史记录</view>
+            <view class="weui-panel__bd">
+
+                <view wx:for="{{history}}" wx:key="{{index}}" class="weui-media-box weui-media-box_text">
+                    <view class="weui-media-box__title weui-media-box__title_in-text">访问者</view>
+                    <view class="weui-media-box__info">
+                        <view class="weui-media-box__info__meta">{{item.reserveDate}}</view>
+                        <view class="weui-media-box__info__meta weui-media-box__info__meta_extra info-{{item.class}}">{{item.msg}}</view>
+                    </view>
+                </view>
+
+                <!-- <view class="weui-media-box weui-media-box_text">
+                    <view class="weui-media-box__title weui-media-box__title_in-text">访问者二</view>
+                    <view class="weui-media-box__info">
+                        <view class="weui-media-box__info__meta">2018-09-09</view>
+                        <view class="weui-media-box__info__meta weui-media-box__info__meta_extra info-success">已审核</view>
+                    </view>
+                </view>
+
+                <view class="weui-media-box weui-media-box_text">
+                    <view class="weui-media-box__title weui-media-box__title_in-text">访问者三</view>
+                    <view class="weui-media-box__info">
+                        <view class="weui-media-box__info__meta">2018-09-09</view>
+                        <view class="weui-media-box__info__meta weui-media-box__info__meta_extra info-normal">已访问</view>
+                    </view>
+                </view>
+
+                <view class="weui-media-box weui-media-box_text">
+                    <view class="weui-media-box__title weui-media-box__title_in-text">访问者三</view>
+                    <view class="weui-media-box__info">
+                        <view class="weui-media-box__info__meta">2018-09-09</view>
+                        <view class="weui-media-box__info__meta weui-media-box__info__meta_extra info-normal">已访问</view>
+                    </view>
+                </view> -->
+            </view>
+            <!-- <view class="weui-panel__ft">
+                <view class="weui-cell weui-cell_access weui-cell_link">
+                    <view class="weui-cell__bd">查看更多</view>
+                    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+                </view>
+            </view> -->
+        </view>  
+        <view bindtap="createNewOrder" class="btn-new">
+          <image src='../images/new2.png'></image>
+        </view>
+    </view>
+    
+</view>

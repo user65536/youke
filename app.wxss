@@ -1,0 +1,81 @@
+/**app.wxss**/
+@import"style/weui.wxss";
+page {
+  background-color: #f4f4f4;
+  font-family: cursive;
+}
+.tips-color {
+  color: #888888;
+}
+.page .btn {
+  width: 690rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  border: 1px solid rgba(0, 0, 0, .1);
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+.page .btn-small {
+  width: 120rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 28rpx;
+}
+.page .btn-middle {
+  width: 360rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+.page .btn-hollow {
+  background: transparent;
+  border-width: 3rpx;
+  border-style: solid;
+}
+.page .btn-hollow-warn {
+  border-color: #e64340;
+  color: #e64340;
+}
+.page .btn-hollow-success {
+  border-color: #1aad19;
+  color: #1aad19;
+}
+.page .btn-hollow-success-hover {
+  border-color: #279127;
+  color: #279127;
+  box-shadow: 0px 0px 3rpx 2rpx rgba(26, 173, 25, .1);
+}
+.page .btn-hollow-warn-hover {
+  border-color: #d63f3c;
+  color: #d63f3c;
+  box-shadow: 0px 0px 3rpx 2rpx rgba(214, 63, 60, .1);
+}
+.page .btn-default {
+  background-color: #2154a7;
+  color: #e2e6e8;
+}
+.page .btn-default-hover {
+  background-color: #154796;
+  color: #b8c2d1;
+}
+.page .btn-sticky-bottom {
+  position: absolute;
+  bottom: 100rpx;
+}
+.page .info-warn {
+  color: #e64340;
+}
+.page .info-success {
+  color: #00c200;
+}
+.page .info-normal {
+  color: #2154a7;
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
